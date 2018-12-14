@@ -41,6 +41,10 @@
 		<Item Name="controls" Type="Folder">
 			<Item Name="ActiveDiffArgs.ctl" Type="VI" URL="../ActiveDiffArgs.ctl"/>
 		</Item>
+		<Item Name="Dialog" Type="Folder">
+			<Item Name="options dialog.vi" Type="VI" URL="../options dialog.vi"/>
+			<Item Name="Set Calling VI Wnd Top and Active.vi" Type="VI" URL="../Set Calling VI Wnd Top and Active.vi"/>
+		</Item>
 		<Item Name="diffmergetool" Type="Folder">
 			<Item Name="action" Type="Folder">
 				<Item Name="black boxes" Type="Folder">
@@ -55,6 +59,7 @@
 				<Item Name="fix all paths.vi" Type="VI" URL="../fix all paths.vi"/>
 				<Item Name="fix symbolic paths.vi" Type="VI" URL="../fix symbolic paths.vi"/>
 				<Item Name="Get DiffArgFilepath.vi" Type="VI" URL="../executables/Get DiffArgFilepath.vi"/>
+				<Item Name="manual arg compare key.vi" Type="VI" URL="../constants/manual arg compare key.vi"/>
 				<Item Name="not found message.vi" Type="VI" URL="../not found message.vi"/>
 				<Item Name="read diff arg settings.vi" Type="VI" URL="../read diff arg settings.vi"/>
 				<Item Name="swap slashes.vi" Type="VI" URL="../swap slashes.vi"/>
@@ -135,6 +140,12 @@
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="user32" Type="VI" URL="user32">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="user32.dll" Type="Document" URL="user32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="1_diffmain" Type="EXE">
@@ -154,7 +165,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6A1A3BC4-E768-46CA-9BC1-B40E13B618D8}</Property>
-				<Property Name="Bld_version.build" Type="Int">39</Property>
+				<Property Name="Bld_version.build" Type="Int">50</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">vidiff.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/executables/vidiff.exe</Property>
@@ -204,7 +215,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D192B5B7-9516-4C6D-A7AB-DEF74155B7A9}</Property>
-				<Property Name="Bld_version.build" Type="Int">38</Property>
+				<Property Name="Bld_version.build" Type="Int">40</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">vimerge.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/executables/vimerge.exe</Property>
@@ -245,7 +256,7 @@
 				<Property Name="Bld_localDestDir" Type="Path">../builds/actions</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{9F8CF89D-0309-451C-984B-2F9584944109}</Property>
-				<Property Name="Bld_version.build" Type="Int">36</Property>
+				<Property Name="Bld_version.build" Type="Int">46</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/actions</Property>
@@ -302,7 +313,7 @@
 				<Property Name="INST_buildSpecName" Type="Str">4_installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
 				<Property Name="INST_productName" Type="Str">vi scc tools</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.39</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.48</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">16008024</Property>
 				<Property Name="MSI_arpCompany" Type="Str">DS</Property>
