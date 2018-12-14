@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="13008000">
+<Project Type="Project" LVVersion="16008000">
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="SMProvider.SMVersion" Type="Int">201310</Property>
 	<Item Name="My Computer" Type="My Computer">
@@ -24,14 +24,22 @@
 			<Item Name="args control name.vi" Type="VI" URL="../constants/args control name.vi"/>
 			<Item Name="arguments help.vi" Type="VI" URL="../constants/arguments help.vi"/>
 			<Item Name="base path.vi" Type="VI" URL="../constants/base path.vi"/>
+			<Item Name="difftool config key.vi" Type="VI" URL="../constants/difftool config key.vi"/>
 			<Item Name="error out ctl.vi" Type="VI" URL="../constants/error out ctl.vi"/>
+			<Item Name="gitconfig name.vi" Type="VI" URL="../constants/gitconfig name.vi"/>
 			<Item Name="lvversion keys.vi" Type="VI" URL="../constants/lvversion keys.vi"/>
 			<Item Name="minimum arguments.vi" Type="VI" URL="../constants/minimum arguments.vi"/>
 			<Item Name="ni directory.vi" Type="VI" URL="../constants/ni directory.vi"/>
 			<Item Name="required keys.vi" Type="VI" URL="../constants/required keys.vi"/>
+			<Item Name="Sourcetree difftool string.vi" Type="VI" URL="../constants/Sourcetree difftool string.vi"/>
 			<Item Name="tcp vi port.vi" Type="VI" URL="../constants/tcp vi port.vi"/>
 			<Item Name="tcpvi name.vi" Type="VI" URL="../constants/tcpvi name.vi"/>
+			<Item Name="vidiff ini filename.vi" Type="VI" URL="../constants/vidiff ini filename.vi"/>
+			<Item Name="vidiff ini section and keys.vi" Type="VI" URL="../constants/vidiff ini section and keys.vi"/>
 			<Item Name="viserver name.vi" Type="VI" URL="../constants/viserver name.vi"/>
+		</Item>
+		<Item Name="controls" Type="Folder">
+			<Item Name="ActiveDiffArgs.ctl" Type="VI" URL="../ActiveDiffArgs.ctl"/>
 		</Item>
 		<Item Name="diffmergetool" Type="Folder">
 			<Item Name="action" Type="Folder">
@@ -46,7 +54,9 @@
 				<Item Name="file exists.vi" Type="VI" URL="../file exists.vi"/>
 				<Item Name="fix all paths.vi" Type="VI" URL="../fix all paths.vi"/>
 				<Item Name="fix symbolic paths.vi" Type="VI" URL="../fix symbolic paths.vi"/>
+				<Item Name="Get DiffArgFilepath.vi" Type="VI" URL="../executables/Get DiffArgFilepath.vi"/>
 				<Item Name="not found message.vi" Type="VI" URL="../not found message.vi"/>
+				<Item Name="read diff arg settings.vi" Type="VI" URL="../read diff arg settings.vi"/>
 				<Item Name="swap slashes.vi" Type="VI" URL="../swap slashes.vi"/>
 			</Item>
 			<Item Name="servers" Type="Folder">
@@ -88,7 +98,7 @@
 				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
-				<Item Name="General Error Handler CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler CORE.vi"/>
+				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
 				<Item Name="Get File Extension.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Get File Extension.vi"/>
 				<Item Name="Get String Text Bounds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Get String Text Bounds.vi"/>
@@ -97,12 +107,15 @@
 				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
 				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
 				<Item Name="Internecine Avoider.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tcp.llb/Internecine Avoider.vi"/>
+				<Item Name="List Directory and LLBs.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/List Directory and LLBs.vi"/>
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
+				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
+				<Item Name="Recursive File List.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Recursive File List.vi"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
@@ -290,7 +303,7 @@
 				<Property Name="INST_productName" Type="Str">vi scc tools</Property>
 				<Property Name="INST_productVersion" Type="Str">1.0.38</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
-				<Property Name="InstSpecVersion" Type="Str">13018021</Property>
+				<Property Name="InstSpecVersion" Type="Str">16008024</Property>
 				<Property Name="MSI_arpCompany" Type="Str">DS</Property>
 				<Property Name="MSI_arpURL" Type="Str">http://www.ds.com/</Property>
 				<Property Name="MSI_distID" Type="Str">{23031F3B-0B7B-4549-955B-A1145590B353}</Property>
