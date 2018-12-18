@@ -83,6 +83,11 @@
 				<Item Name="set exit code.vi" Type="VI" URL="../executables/set exit code.vi"/>
 				<Item Name="try to reach vi server.vi" Type="VI" URL="../executables/try to reach vi server.vi"/>
 			</Item>
+			<Item Name="PostBuild" Type="Folder">
+				<Item Name="FindBuildPath.vi" Type="VI" URL="../executables/FindBuildPath.vi"/>
+				<Item Name="set initial CompareSettings.vi" Type="VI" URL="../executables/set initial CompareSettings.vi"/>
+				<Item Name="Vidiff Post-Build Action.vi" Type="VI" URL="../Vidiff Post-Build Action.vi"/>
+			</Item>
 			<Item Name="diffmain.vi" Type="VI" URL="../executables/diffmain.vi"/>
 			<Item Name="mergemain.vi" Type="VI" URL="../executables/mergemain.vi"/>
 		</Item>
@@ -164,8 +169,9 @@
 				<Property Name="Bld_localDestDir" Type="Path">../builds/executables</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/exe/PostBuild/Vidiff Post-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6A1A3BC4-E768-46CA-9BC1-B40E13B618D8}</Property>
-				<Property Name="Bld_version.build" Type="Int">50</Property>
+				<Property Name="Bld_version.build" Type="Int">51</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">vidiff.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/executables/vidiff.exe</Property>
@@ -175,7 +181,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/executables/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_cmdLineArgs" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{664C3503-407F-410E-8316-CD80D7B2F022}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{82228041-79F5-4BB8-986D-3015B67FA317}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/exe/launcher/cmdmain.vi</Property>
