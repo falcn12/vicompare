@@ -171,7 +171,7 @@
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/exe/PostBuild/Vidiff Post-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6A1A3BC4-E768-46CA-9BC1-B40E13B618D8}</Property>
-				<Property Name="Bld_version.build" Type="Int">51</Property>
+				<Property Name="Bld_version.build" Type="Int">52</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">vidiff.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/executables/vidiff.exe</Property>
