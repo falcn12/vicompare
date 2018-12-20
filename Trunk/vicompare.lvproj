@@ -91,6 +91,9 @@
 			<Item Name="diffmain.vi" Type="VI" URL="../executables/diffmain.vi"/>
 			<Item Name="mergemain.vi" Type="VI" URL="../executables/mergemain.vi"/>
 		</Item>
+		<Item Name="TESTING" Type="Folder">
+			<Item Name="TEST_DialogValuesMatchINI.vi" Type="VI" URL="../TESTING/TEST_DialogValuesMatchINI.vi"/>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -142,6 +145,7 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="ActiveDiffArgs.ctl" Type="VI" URL="../controls/ActiveDiffArgs.ctl"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -171,7 +175,7 @@
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/exe/PostBuild/Vidiff Post-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6A1A3BC4-E768-46CA-9BC1-B40E13B618D8}</Property>
-				<Property Name="Bld_version.build" Type="Int">52</Property>
+				<Property Name="Bld_version.build" Type="Int">54</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">vidiff.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/executables/vidiff.exe</Property>
@@ -181,7 +185,7 @@
 				<Property Name="Destination[1].path" Type="Path">../builds/executables/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="Exe_cmdLineArgs" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{82228041-79F5-4BB8-986D-3015B67FA317}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{EBFE5ECC-5605-4683-B2EA-7759CC372E68}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/exe/launcher/cmdmain.vi</Property>
@@ -262,14 +266,14 @@
 				<Property Name="Bld_localDestDir" Type="Path">../builds/actions</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{9F8CF89D-0309-451C-984B-2F9584944109}</Property>
-				<Property Name="Bld_version.build" Type="Int">46</Property>
+				<Property Name="Bld_version.build" Type="Int">48</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/actions</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/actions/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{FEBDC48A-D241-4856-9746-F194020F5155}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{EBFE5ECC-5605-4683-B2EA-7759CC372E68}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/diffmergetool/action/performaction.vi</Property>
@@ -292,7 +296,19 @@
 				<Property Name="Source[5].itemID" Type="Ref">/My Computer/exe</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">Exclude</Property>
 				<Property Name="Source[5].type" Type="Str">Container</Property>
-				<Property Name="SourceCount" Type="Int">6</Property>
+				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Dialog</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">Container</Property>
+				<Property Name="Source[7].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[7].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/TESTING</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Exclude</Property>
+				<Property Name="Source[7].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">8</Property>
 			</Item>
 			<Item Name="4_installer" Type="Installer">
 				<Property Name="Destination[0].name" Type="Str">viscc</Property>
@@ -319,7 +335,7 @@
 				<Property Name="INST_buildSpecName" Type="Str">4_installer</Property>
 				<Property Name="INST_defaultDir" Type="Str">{B240C314-BA66-4A38-9EB4-7F94B297EE40}</Property>
 				<Property Name="INST_productName" Type="Str">vi scc tools</Property>
-				<Property Name="INST_productVersion" Type="Str">1.0.48</Property>
+				<Property Name="INST_productVersion" Type="Str">1.0.50</Property>
 				<Property Name="InstSpecBitness" Type="Str">32-bit</Property>
 				<Property Name="InstSpecVersion" Type="Str">16008024</Property>
 				<Property Name="MSI_arpCompany" Type="Str">DS</Property>
