@@ -39,7 +39,7 @@
 			<Item Name="viserver name.vi" Type="VI" URL="../constants/viserver name.vi"/>
 		</Item>
 		<Item Name="controls" Type="Folder">
-			<Item Name="ActiveDiffArgs.ctl" Type="VI" URL="../ActiveDiffArgs.ctl"/>
+			<Item Name="CL Args.ctl" Type="VI" URL="../controls/CL Args.ctl"/>
 		</Item>
 		<Item Name="Dialog" Type="Folder">
 			<Item Name="options dialog.vi" Type="VI" URL="../options dialog.vi"/>
@@ -145,7 +145,6 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="ActiveDiffArgs.ctl" Type="VI" URL="../controls/ActiveDiffArgs.ctl"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -273,7 +272,7 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/actions/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{EBFE5ECC-5605-4683-B2EA-7759CC372E68}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{5AE6824C-DC8C-462E-9E8C-D176F8BA2556}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/diffmergetool/action/performaction.vi</Property>
